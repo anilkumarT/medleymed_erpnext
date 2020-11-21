@@ -1,0 +1,135 @@
+[ERROR] 2020-11-18 15:55:45,367 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-18 15:55:45.309883-127.0.0.1-aeb
+[ERROR] 2020-11-18 15:55:46,212 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-18 15:55:46.199971-127.0.0.1-bb1
+[ERROR] 2020-11-18 17:13:13,154 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-18 17:13:13.125466-127.0.0.1-df3
+[ERROR] 2020-11-18 17:13:14,253 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-18 17:13:14.241662-127.0.0.1-247
+[ERROR] 2020-11-18 18:40:29,863 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "cmd": "medleyhealth"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 52, in execute_cmd
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 49, in execute_cmd
+    method = get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 216, in get_attr
+    method = globals()[cmd]
+KeyError: 'medleyhealth'
+[ERROR] 2020-11-18 18:40:30,031 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-18 18:40:29.884158-127.0.0.1-f57
+[ERROR] 2020-11-18 18:40:59,075 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "cmd": "medleyhealth.doctype.doctor.doctor"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 52, in execute_cmd
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 49, in execute_cmd
+    method = get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 214, in get_attr
+    method = frappe.get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1055, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 836, in get_module
+    return importlib.import_module(modulename)
+  File "/home/anil/medley/env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'medleyhealth.doctype'
+[ERROR] 2020-11-18 18:40:59,160 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-18 18:40:59.077195-127.0.0.1-5cf
+[ERROR] 2020-11-18 18:43:01,391 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "cmd": "medleyhealth.doctype.doctor.doctor.get_users_list"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 52, in execute_cmd
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 49, in execute_cmd
+    method = get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 214, in get_attr
+    method = frappe.get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1055, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 836, in get_module
+    return importlib.import_module(modulename)
+  File "/home/anil/medley/env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'medleyhealth.doctype'
+[ERROR] 2020-11-18 18:43:01,474 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-18 18:43:01.391937-127.0.0.1-56b
+[ERROR] 2020-11-18 18:45:11,363 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "cmd": "erpnext.hello.get_users_list"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 52, in execute_cmd
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 49, in execute_cmd
+    method = get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 214, in get_attr
+    method = frappe.get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1055, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 836, in get_module
+    return importlib.import_module(modulename)
+  File "/home/anil/medley/env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'erpnext.hello'
+[ERROR] 2020-11-18 18:45:11,506 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-18 18:45:11.366172-127.0.0.1-f7a

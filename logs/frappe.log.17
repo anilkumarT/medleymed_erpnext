@@ -1,0 +1,93 @@
+[ERROR] 2020-11-12 18:11:36,748 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_details": {
+  "about_me": "expericence",
+  "city": "city",
+  "doctor_name": "avinash30",
+  "gender": "Female",
+  "mobile_no": "00000000",
+  "specialisation": "mbbs",
+  "years_of_experience": "3"
+ }
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 136, in create_doctor
+    data = json.loads(args.data)
+  File "/usr/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[ERROR] 2020-11-12 18:13:56,485 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_details": {
+  "about_me": "expericence",
+  "city": "city",
+  "doctor_name": "avinash30",
+  "gender": "Female",
+  "mobile_no": "00000000",
+  "specialisation": "mbbs",
+  "years_of_experience": "3"
+ }
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 161, in create_doctor
+    create_doctor.insert(ignore_permissions=True)
+AttributeError: 'function' object has no attribute 'insert'
+[ERROR] 2020-11-12 18:13:56,596 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 18:13:56.486031-127.0.0.1-3bb
+[ERROR] 2020-11-12 18:14:30,787 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_details": {
+  "about_me": "expericence",
+  "city": "city",
+  "doctor_name": "avinash30",
+  "gender": "Female",
+  "mobile_no": "00000000",
+  "specialisation": "mbbs",
+  "years_of_experience": "3"
+ }
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 161, in create_doctor
+    create_doctor.insert(ignore_permissions=True)
+AttributeError: 'function' object has no attribute 'insert'
+[ERROR] 2020-11-12 18:14:30,901 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 18:14:30.788340-127.0.0.1-11c

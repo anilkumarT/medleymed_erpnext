@@ -1,0 +1,10 @@
+[ERROR] 2020-11-16 08:19:31,085 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-16 08:19:31.080975-127.0.0.1-58e
+[ERROR] 2020-11-16 08:19:32,034 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-16 08:19:32.026657-127.0.0.1-015
+[ERROR] 2020-11-16 08:19:54,700 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-16 08:19:54.693439-127.0.0.1-463
+[ERROR] 2020-11-16 08:19:55,204 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-16 08:19:55.200858-127.0.0.1-020
+[ERROR] 2020-11-16 08:24:28,112 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-16 08:24:28.062173-127.0.0.1-f65

@@ -1,0 +1,7 @@
+frappe
+erpnext
+feedback_enquiry
+medleyhealth
+vue_simple_pos
+bluetheme
+retailer_core

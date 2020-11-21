@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include feedback_enquiry *.css
+recursive-include feedback_enquiry *.csv
+recursive-include feedback_enquiry *.html
+recursive-include feedback_enquiry *.ico
+recursive-include feedback_enquiry *.js
+recursive-include feedback_enquiry *.json
+recursive-include feedback_enquiry *.md
+recursive-include feedback_enquiry *.png
+recursive-include feedback_enquiry *.py
+recursive-include feedback_enquiry *.svg
+recursive-include feedback_enquiry *.txt
+recursive-exclude feedback_enquiry *.pyc

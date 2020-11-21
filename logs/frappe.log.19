@@ -1,0 +1,1942 @@
+[ERROR] 2020-11-12 11:37:24,056 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash85",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 320, in db_insert
+    frappe.db.sql("""INSERT INTO `tab{doctype}` ({columns})
+  File "/home/anil/medley/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'avinash85' for key 'PRIMARY'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 74, in create_doctor
+    create_doctor.insert(ignore_permissions=True)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 248, in insert
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.db_insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 335, in db_insert
+    raise frappe.DuplicateEntryError(self.doctype, self.name, e)
+frappe.exceptions.DuplicateEntryError: ('Doctor', 'avinash85', IntegrityError(1062, "Duplicate entry 'avinash85' for key 'PRIMARY'"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 97, in create_doctor
+    api_response.posting_date = str(e['message'])
+TypeError: 'DuplicateEntryError' object is not subscriptable
+[ERROR] 2020-11-12 11:37:24,173 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 11:37:24.058577-127.0.0.1-280
+[ERROR] 2020-11-12 11:37:59,814 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash85",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 320, in db_insert
+    frappe.db.sql("""INSERT INTO `tab{doctype}` ({columns})
+  File "/home/anil/medley/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'avinash85' for key 'PRIMARY'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 74, in create_doctor
+    create_doctor.insert(ignore_permissions=True)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 248, in insert
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.db_insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 335, in db_insert
+    raise frappe.DuplicateEntryError(self.doctype, self.name, e)
+frappe.exceptions.DuplicateEntryError: ('Doctor', 'avinash85', IntegrityError(1062, "Duplicate entry 'avinash85' for key 'PRIMARY'"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 97, in create_doctor
+    api_response.posting_date = str(e["message"])
+TypeError: 'DuplicateEntryError' object is not subscriptable
+[ERROR] 2020-11-12 11:38:00,109 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 11:37:59.816574-127.0.0.1-a31
+[ERROR] 2020-11-12 11:38:53,638 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash85",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 320, in db_insert
+    frappe.db.sql("""INSERT INTO `tab{doctype}` ({columns})
+  File "/home/anil/medley/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'avinash85' for key 'PRIMARY'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 74, in create_doctor
+    create_doctor.insert(ignore_permissions=True)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 248, in insert
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.db_insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 335, in db_insert
+    raise frappe.DuplicateEntryError(self.doctype, self.name, e)
+frappe.exceptions.DuplicateEntryError: ('Doctor', 'avinash85', IntegrityError(1062, "Duplicate entry 'avinash85' for key 'PRIMARY'"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 99, in create_doctor
+    api_response.save(ignore_permissions=True)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 273, in save
+    return self._save(*args, **kwargs)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 296, in _save
+    self.insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.db_insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 320, in db_insert
+    frappe.db.sql("""INSERT INTO `tab{doctype}` ({columns})
+  File "/home/anil/medley/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1292, "Incorrect date value: 'anil kumar' for column `_d59d3f80a63fe7c9`.`tabCustom Api Response`.`posting_date` at row 1")
+[ERROR] 2020-11-12 11:38:53,762 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 11:38:53.640280-127.0.0.1-097
+[ERROR] 2020-11-12 11:40:28,883 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash85",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 320, in db_insert
+    frappe.db.sql("""INSERT INTO `tab{doctype}` ({columns})
+  File "/home/anil/medley/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'avinash85' for key 'PRIMARY'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 74, in create_doctor
+    create_doctor.insert(ignore_permissions=True)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 248, in insert
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.db_insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 335, in db_insert
+    raise frappe.DuplicateEntryError(self.doctype, self.name, e)
+frappe.exceptions.DuplicateEntryError: ('Doctor', 'avinash85', IntegrityError(1062, "Duplicate entry 'avinash85' for key 'PRIMARY'"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 97, in create_doctor
+    api_response.posting_date = e["message"]["creation"]
+TypeError: 'DuplicateEntryError' object is not subscriptable
+[ERROR] 2020-11-12 11:40:28,995 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 11:40:28.884461-127.0.0.1-f3b
+[ERROR] 2020-11-12 11:41:42,555 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "cmd": "frappe.realtime.get_user_info"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+TypeError: get_user_info() missing 1 required positional argument: 'sid'
+[ERROR] 2020-11-12 11:41:42,677 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 11:41:42.556027-127.0.0.1-4fe
+[ERROR] 2020-11-12 11:41:59,754 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash85",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 320, in db_insert
+    frappe.db.sql("""INSERT INTO `tab{doctype}` ({columns})
+  File "/home/anil/medley/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'avinash85' for key 'PRIMARY'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 74, in create_doctor
+    create_doctor.insert(ignore_permissions=True)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 248, in insert
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.db_insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 335, in db_insert
+    raise frappe.DuplicateEntryError(self.doctype, self.name, e)
+frappe.exceptions.DuplicateEntryError: ('Doctor', 'avinash85', IntegrityError(1062, "Duplicate entry 'avinash85' for key 'PRIMARY'"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 97, in create_doctor
+    api_response.posting_date = e["message"]["creation"]
+TypeError: 'DuplicateEntryError' object is not subscriptable
+[ERROR] 2020-11-12 11:41:59,772 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 11:41:59.755464-127.0.0.1-b3b
+[DEBUG] 2020-11-12 11:42:40,699 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:42:40,835 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:43:40,903 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:43:41,060 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:44:41,135 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:44:41,339 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:45:41,401 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:45:41,597 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:46:41,676 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:46:41,804 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:47:41,859 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:47:41,987 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:48:42,056 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:48:42,298 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:49:42,366 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:49:42,629 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:50:42,699 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:50:42,837 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 11:51:31,661 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash83",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 71, in create_doctor
+    json_object = json.dumps(create_doctor, indent = 4)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.8/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/usr/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Doctor is not JSON serializable
+[ERROR] 2020-11-12 11:51:31,845 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 11:51:31.664634-127.0.0.1-442
+[DEBUG] 2020-11-12 11:51:42,900 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:51:43,058 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:52:43,124 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:52:43,426 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:53:43,500 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:53:43,741 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:54:43,812 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:54:43,992 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:55:44,053 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:55:44,241 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:56:44,304 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:56:44,704 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:57:44,768 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:57:44,928 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:58:44,999 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:58:45,173 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 11:59:45,242 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 11:59:45,397 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:00:45,462 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:00:45,784 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:01:45,913 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:01:46,114 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:02:46,175 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:02:46,323 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:03:46,389 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:03:46,524 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:04:46,584 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:04:46,777 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 12:05:15,864 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash82",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 320, in db_insert
+    frappe.db.sql("""INSERT INTO `tab{doctype}` ({columns})
+  File "/home/anil/medley/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'avinash82' for key 'PRIMARY'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 85, in create_doctor
+    create_doctor.insert(ignore_permissions=True)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 248, in insert
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.db_insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 335, in db_insert
+    raise frappe.DuplicateEntryError(self.doctype, self.name, e)
+frappe.exceptions.DuplicateEntryError: ('Doctor', 'avinash82', IntegrityError(1062, "Duplicate entry 'avinash82' for key 'PRIMARY'"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 114, in create_doctor
+    api_response.response(ignore_permissions=True)
+TypeError: 'NoneType' object is not callable
+[ERROR] 2020-11-12 12:05:15,965 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 12:05:15.865415-127.0.0.1-80a
+[DEBUG] 2020-11-12 12:05:46,841 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:05:46,972 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 12:06:20,959 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash82",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 320, in db_insert
+    frappe.db.sql("""INSERT INTO `tab{doctype}` ({columns})
+  File "/home/anil/medley/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'avinash82' for key 'PRIMARY'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 85, in create_doctor
+    create_doctor.insert(ignore_permissions=True)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 248, in insert
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.db_insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 335, in db_insert
+    raise frappe.DuplicateEntryError(self.doctype, self.name, e)
+frappe.exceptions.DuplicateEntryError: ('Doctor', 'avinash82', IntegrityError(1062, "Duplicate entry 'avinash82' for key 'PRIMARY'"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 115, in create_doctor
+    api_response.save(ignore_permissions=True)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 273, in save
+    return self._save(*args, **kwargs)
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 296, in _save
+    self.insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.db_insert()
+  File "/home/anil/medley/apps/frappe/frappe/model/base_document.py", line 320, in db_insert
+    frappe.db.sql("""INSERT INTO `tab{doctype}` ({columns})
+  File "/home/anil/medley/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''status_code': '500'})' at line 2")
+[ERROR] 2020-11-12 12:06:21,063 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 12:06:20.961164-127.0.0.1-18f
+[DEBUG] 2020-11-12 12:06:47,032 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:06:47,174 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:07:47,235 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:07:47,385 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:08:47,449 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:08:47,690 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:09:47,752 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:09:47,886 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:10:47,941 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:10:48,054 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:11:48,122 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:11:48,271 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:12:48,341 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:12:48,517 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:13:48,575 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:13:48,720 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:14:48,792 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:14:48,955 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:15:49,015 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:15:49,164 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:16:49,223 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:16:49,407 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:17:49,482 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:17:49,652 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:18:49,725 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:18:50,007 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:19:50,077 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:19:50,188 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:20:50,250 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:20:50,414 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:21:50,474 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:21:50,607 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:22:50,664 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:22:50,774 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:23:50,833 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:23:50,921 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:24:50,981 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:24:51,142 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:25:51,202 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:25:51,340 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 12:25:57,225 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash80",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 52, in execute_cmd
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 49, in execute_cmd
+    method = get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 214, in get_attr
+    method = frappe.get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1055, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 836, in get_module
+    return importlib.import_module(modulename)
+  File "/home/anil/medley/env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 85
+    if not frappe.db.exists("Doctor", mobile_no)
+                                               ^
+SyntaxError: invalid syntax
+[ERROR] 2020-11-12 12:25:57,354 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 12:25:57.226146-127.0.0.1-09c
+[DEBUG] 2020-11-12 12:26:51,403 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:26:51,525 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:27:51,602 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:27:51,742 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:28:51,806 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:28:51,999 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:29:52,062 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:29:52,243 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:30:52,311 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:30:52,450 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:31:52,514 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:31:52,640 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:32:52,699 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:32:52,872 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:33:52,930 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:33:53,056 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:34:53,126 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:34:53,310 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:35:53,378 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:35:53,512 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:36:53,582 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:36:53,737 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:37:53,805 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:37:53,932 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:38:54,003 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:38:54,149 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:39:54,206 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:39:54,325 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:40:54,381 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:40:54,555 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:41:54,617 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:41:54,751 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:42:54,816 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:42:55,003 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:43:55,072 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:43:55,227 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:44:55,306 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:44:55,514 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:45:55,583 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:45:55,720 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:46:55,781 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:46:55,936 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:47:55,997 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:47:56,149 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:48:56,220 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:48:56,498 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:49:56,566 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:49:56,702 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:50:56,763 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:50:56,898 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 12:51:23,446 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash75",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 52, in execute_cmd
+    raise e
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 49, in execute_cmd
+    method = get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 214, in get_attr
+    method = frappe.get_attr(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1055, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 836, in get_module
+    return importlib.import_module(modulename)
+  File "/home/anil/medley/env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 84
+    print(doctors)
+                 ^
+IndentationError: unindent does not match any outer indentation level
+[ERROR] 2020-11-12 12:51:23,576 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 12:51:23.446682-127.0.0.1-d45
+[DEBUG] 2020-11-12 12:51:56,956 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:51:57,067 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:52:57,139 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:52:57,372 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 12:53:54,838 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash75",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 85, in create_doctor
+    print(doctors.mobile_no)
+AttributeError: 'list' object has no attribute 'mobile_no'
+[ERROR] 2020-11-12 12:53:54,937 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 12:53:54.839355-127.0.0.1-6f4
+[DEBUG] 2020-11-12 12:53:57,430 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:53:57,567 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 12:54:41,993 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash75",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 85, in create_doctor
+    print(doctors['mobile_no'])
+TypeError: list indices must be integers or slices, not str
+[ERROR] 2020-11-12 12:54:42,093 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 12:54:41.993892-127.0.0.1-8fc
+[DEBUG] 2020-11-12 12:54:57,630 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:54:57,771 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 12:55:04,368 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash75",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 85, in create_doctor
+    print(doctors[0]['mobile_no'])
+KeyError: 'mobile_no'
+[ERROR] 2020-11-12 12:55:04,467 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 12:55:04.369647-127.0.0.1-935
+[ERROR] 2020-11-12 12:55:23,834 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash75",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 85, in create_doctor
+    print(doctors[0][mobile_no])
+KeyError: '00000000'
+[ERROR] 2020-11-12 12:55:23,939 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 12:55:23.834758-127.0.0.1-649
+[DEBUG] 2020-11-12 12:55:57,836 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:55:57,974 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:56:58,031 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:56:58,183 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 12:57:05,907 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash75",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 85, in create_doctor
+    print(doctors.__dict__['mobile_no'])
+AttributeError: 'list' object has no attribute '__dict__'
+[ERROR] 2020-11-12 12:57:06,018 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 12:57:05.908481-127.0.0.1-eb3
+[DEBUG] 2020-11-12 12:57:58,241 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:57:58,358 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 12:58:58,417 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:58:58,536 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 12:59:07,792 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash75",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 86, in create_doctor
+    print(doctor_details['mobile_no'])
+KeyError: 'mobile_no'
+[ERROR] 2020-11-12 12:59:07,899 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 12:59:07.793145-127.0.0.1-592
+[DEBUG] 2020-11-12 12:59:58,598 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 12:59:58,768 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:00:58,830 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:00:59,003 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:01:59,072 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:01:59,235 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:02:59,301 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:02:59,478 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:03:59,537 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:03:59,652 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:04:59,712 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:04:59,862 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:05:59,937 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:06:00,060 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:07:00,123 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:07:00,286 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:08:00,359 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:08:00,625 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:09:00,684 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:09:00,809 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:10:00,881 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:10:01,042 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:11:01,101 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:11:01,236 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:12:01,311 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:12:01,622 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:13:01,686 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:13:01,796 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:14:01,854 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:14:01,990 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 13:14:03,210 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash75",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 85, in create_doctor
+    for doctor_details in doctors:
+TypeError: 'NoneType' object is not iterable
+[ERROR] 2020-11-12 13:14:03,321 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 13:14:03.211505-127.0.0.1-92d
+[DEBUG] 2020-11-12 13:15:02,056 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:15:02,198 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:16:02,261 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:16:02,401 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:17:02,469 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:17:02,683 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:18:02,748 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:18:02,862 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[ERROR] 2020-11-12 13:18:08,232 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash75",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 87, in create_doctor
+    print(doctor_details["mobile_no"])
+TypeError: 'DocField' object is not subscriptable
+[ERROR] 2020-11-12 13:18:08,333 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 13:18:08.232843-127.0.0.1-c37
+[ERROR] 2020-11-12 13:18:26,266 | /home/anil/medley/apps/frappe/frappe/app.py:
+Site: ordermedicines
+Form Dict: {
+ "about_me": "expericence",
+ "city": "city",
+ "cmd": "medleyhealth.medleyhealth.doctype.doctor.doctor.create_doctor",
+ "doctor_name": "avinash75",
+ "gender": "Female",
+ "mobile_no": "00000000",
+ "specialisation": "mbbs",
+ "years_of_experience": "3"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/anil/medley/apps/frappe/frappe/app.py", line 64, in application
+    response = frappe.api.handle()
+  File "/home/anil/medley/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/anil/medley/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/anil/medley/apps/frappe/frappe/__init__.py", line 1064, in call
+    return fn(*args, **newargs)
+  File "/home/anil/medley/apps/medleyhealth/medleyhealth/medleyhealth/doctype/doctor/doctor.py", line 87, in create_doctor
+    print(doctor_details.mobile_no)
+AttributeError: 'DocField' object has no attribute 'mobile_no'
+[ERROR] 2020-11-12 13:18:26,373 | /home/anil/medley/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2020-11-12 13:18:26.267641-127.0.0.1-7d0
+[DEBUG] 2020-11-12 13:19:02,922 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:19:03,054 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:20:03,117 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:20:03,249 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:21:03,324 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:21:03,488 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:22:03,562 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:22:03,693 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:23:03,774 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:23:03,926 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:24:04,002 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:24:04,175 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:25:04,256 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:25:04,414 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:26:04,494 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:26:04,651 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:27:04,735 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:27:04,891 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:28:04,973 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:28:05,160 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:29:05,239 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:29:05,391 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:30:05,477 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:30:05,624 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:31:05,706 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:31:05,857 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:32:05,944 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:32:06,141 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:33:06,212 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:33:06,349 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:34:06,427 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:34:06,557 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:35:06,631 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:35:06,768 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:36:06,851 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:36:07,022 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:37:07,109 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:37:07,265 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:38:07,348 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:38:07,507 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:39:07,591 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:39:07,739 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:40:07,828 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:40:08,030 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:41:08,104 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:41:08,252 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:42:08,333 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:42:08,552 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:43:08,638 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:43:08,809 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:44:08,874 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:44:09,104 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:45:09,178 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:45:09,374 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:46:09,449 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:46:09,621 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:47:09,697 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:47:09,877 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:48:09,956 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:48:10,264 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:49:10,340 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:49:10,549 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:50:10,635 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:50:10,799 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:51:10,875 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:51:11,065 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:52:11,135 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:52:11,295 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:53:11,367 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:53:11,530 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:54:11,605 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:54:11,801 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:55:11,879 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:55:12,080 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:56:12,157 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:56:12,435 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:57:12,504 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:57:12,644 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:58:12,715 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:58:12,898 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 13:59:12,975 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 13:59:13,171 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:00:13,245 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:00:13,542 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:01:13,621 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:01:13,785 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:02:13,859 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:02:14,035 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:03:14,118 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:03:14,277 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:04:14,350 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:04:14,542 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:05:14,621 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:05:14,807 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:06:14,885 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:06:15,035 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:07:15,109 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:07:15,285 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:08:15,361 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:08:15,672 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:09:15,745 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:09:15,914 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:10:15,989 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:10:16,186 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:11:16,265 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:11:16,448 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:12:16,522 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:12:16,829 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:13:16,903 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:13:17,072 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:14:17,149 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:14:17,372 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:15:17,446 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:15:17,647 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:16:17,725 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:16:17,985 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:17:18,062 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:17:18,255 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:18:18,332 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:18:18,518 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:19:18,590 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:19:18,785 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:20:18,858 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:20:19,155 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:21:19,228 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:21:19,404 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:22:19,478 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:22:19,654 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:23:19,733 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:23:19,901 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:24:19,968 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:24:20,230 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:25:20,305 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:25:20,518 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:26:20,603 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:26:20,831 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:27:20,910 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:27:21,101 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:28:21,175 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:28:21,458 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:29:21,531 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:29:21,789 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:30:21,865 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine
+[DEBUG] 2020-11-12 14:30:22,165 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicines
+Queued events for site ordermedicines
+[DEBUG] 2020-11-12 14:31:22,229 | /home/anil/medley/apps/frappe/frappe/utils/scheduler.py:
+Site: ordermedicine
+Access denied for site ordermedicine

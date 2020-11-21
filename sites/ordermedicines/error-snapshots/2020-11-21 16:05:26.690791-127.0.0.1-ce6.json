@@ -1,0 +1,508 @@
+{
+ "etype": "InternalError",
+ "evalue": "InternalError(1054, \"Unknown column 'count' in 'field list'\")",
+ "exception": {
+  "args": [
+   40,
+   49,
+   48,
+   53,
+   52,
+   44,
+   32,
+   34,
+   85,
+   110,
+   107,
+   110,
+   111,
+   119,
+   110,
+   32,
+   99,
+   111,
+   108,
+   117,
+   109,
+   110,
+   32,
+   39,
+   99,
+   111,
+   117,
+   110,
+   116,
+   39,
+   32,
+   105,
+   110,
+   32,
+   39,
+   102,
+   105,
+   101,
+   108,
+   100,
+   32,
+   108,
+   105,
+   115,
+   116,
+   39,
+   34,
+   41
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   73,
+   110,
+   116,
+   101,
+   114,
+   110,
+   97,
+   108,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://0.0.0.0:8000/api/method/erpnext.doctor_api.get_doctor_list' [GET]>)",
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/anil/medley/apps/frappe/frappe/api.py'>",
+    "frappe.api. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/anil/medley/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "62": "",
+    "63": "\t\telif frappe.request.path.startswith(\"/api/\"):",
+    "64": "\t\t\tresponse = frappe.api.handle()",
+    "65": "",
+    "66": "\t\telif frappe.request.path.startswith('/backups'):"
+   },
+   "lnum": 64
+  },
+  {
+   "call": "()",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/anil/medley/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/anil/medley/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/api.py",
+   "func": "handle",
+   "lines": {
+    "57": "\tif call==\"method\":",
+    "58": "\t\tfrappe.local.form_dict.cmd = doctype",
+    "59": "\t\treturn frappe.handler.handle()",
+    "60": "",
+    "61": "\telif call==\"resource\":"
+   },
+   "lnum": 59
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'erpnext.doctor_api.get_doctor_list'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "22": "",
+    "23": "\tif cmd!='login':",
+    "24": "\t\tdata = execute_cmd(cmd)",
+    "25": "",
+    "26": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 24
+  },
+  {
+   "call": "(cmd='erpnext.doctor_api.get_doctor_list', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'cmd': 'erpnext.doctor_api.get_doctor_list'}",
+    "global frappe": "<module 'frappe' from '/home/anil/medley/apps/frappe/frappe/__init__.py'>",
+    "method": "<function get_doctor_list>"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "62": "\tis_valid_http_method(method)",
+    "63": "",
+    "64": "\treturn frappe.call(method, **frappe.form_dict)",
+    "65": "",
+    "66": "def is_whitelisted(method):"
+   },
+   "lnum": 64
+  },
+  {
+   "call": "(fn=<function get_doctor_list>, *args=(), **kwargs={'cmd': 'erpnext.doctor_api.get_doctor_list'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function get_doctor_list>",
+    "newargs": "{}"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1062": "\tnewargs = get_newargs(fn, kwargs)",
+    "1063": "",
+    "1064": "\treturn fn(*args, **newargs)",
+    "1065": "",
+    "1066": "def get_newargs(fn, kwargs):"
+   },
+   "lnum": 1064
+  },
+  {
+   "call": "()",
+   "dump": {
+    "doctor_details": "undefined",
+    "fields": "undefined",
+    "frappe. db": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "frappe.db. get_all": "<function Database.get_all>",
+    "global frappe": "<module 'frappe' from '/home/anil/medley/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/anil/medley/apps/erpnext/erpnext/doctor_api.py",
+   "func": "get_doctor_list",
+   "lines": {
+    "15": "@frappe.whitelist()",
+    "16": "def get_doctor_list():",
+    "17": "\tdoctor_details = frappe.db.get_all('Doctor',fields=['count','doctor_name','specialisation','gender', 'years_of_experience', 'about_me', 'mobile_no'])",
+    "18": "\tdoctor_info = json.dumps(doctor_details)",
+    "19": "\treturn doctor_info"
+   },
+   "lnum": 17
+  },
+  {
+   "call": "(*args=('Doctor',), **kwargs={'fields': ['count', 'doctor_name', 'specialisation', 'gender', 'years_of_experience', 'about_me', 'mobile_no']})",
+   "dump": {
+    "args": "('Doctor',)",
+    "frappe. get_all": "<function get_all>",
+    "global frappe": "<module 'frappe' from '/home/anil/medley/apps/frappe/frappe/__init__.py'>",
+    "kwargs": "{'fields': ['count', 'doctor_name', 'specialisation', 'gender', 'years_of_experience', 'about_me', 'mobile_no']}"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/database/database.py",
+   "func": "get_all",
+   "lines": {
+    "526": "\t@staticmethod",
+    "527": "\tdef get_all(*args, **kwargs):",
+    "528": "\t\treturn frappe.get_all(*args, **kwargs)",
+    "529": "",
+    "530": "\t@staticmethod"
+   },
+   "lnum": 528
+  },
+  {
+   "call": "(doctype='Doctor', *args=(), **kwargs={'fields': ['count', 'doctor_name', 'specialisation', 'gender', 'years_of_experience', 'about_me', 'mobile_no'], 'ignore_permissions': True, 'limit_page_length': 0})",
+   "dump": {
+    "args": "()",
+    "doctype": "'Doctor'",
+    "global get_list": "<function get_list>",
+    "kwargs": "{'fields': ['count', 'doctor_name', 'specialisation', 'gender', 'years_of_experience', 'about_me', 'mobile_no'], 'ignore_permissions': True, 'limit_page_length': 0}"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/__init__.py",
+   "func": "get_all",
+   "lines": {
+    "1325": "\tif not \"limit_page_length\" in kwargs:",
+    "1326": "\t\tkwargs[\"limit_page_length\"] = 0",
+    "1327": "\treturn get_list(doctype, *args, **kwargs)",
+    "1328": "",
+    "1329": "def get_value(*args, **kwargs):"
+   },
+   "lnum": 1327
+  },
+  {
+   "call": "(doctype='Doctor', *args=(), **kwargs={'fields': ['count', 'doctor_name', 'specialisation', 'gender', 'years_of_experience', 'about_me', 'mobile_no'], 'ignore_permissions': True, 'limit_page_length': 0})",
+   "dump": {
+    ").execute": "undefined",
+    "args": "()",
+    "doctype": "'Doctor'",
+    "frappe": "<module 'frappe' from '/home/anil/medley/apps/frappe/frappe/__init__.py'>",
+    "frappe. model": "<module 'frappe.model' from '/home/anil/medley/apps/frappe/frappe/model/__init__.py'>",
+    "frappe.model. db_query": "<module 'frappe.model.db_query' from '/home/anil/medley/apps/frappe/frappe/model/db_query.py'>",
+    "frappe.model.db_query. DatabaseQuery": "<class 'frappe.model.db_query.DatabaseQuery'>",
+    "kwargs": "{'fields': ['count', 'doctor_name', 'specialisation', 'gender', 'years_of_experience', 'about_me', 'mobile_no'], 'ignore_permissions': True, 'limit_page_length': 0}"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/__init__.py",
+   "func": "get_list",
+   "lines": {
+    "1298": "\t\"\"\"",
+    "1299": "\timport frappe.model.db_query",
+    "1300": "\treturn frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)",
+    "1301": "",
+    "1302": "def get_all(doctype, *args, **kwargs):"
+   },
+   "lnum": 1300
+  },
+  {
+   "call": "(self=<frappe.model.db_query.DatabaseQuery object>, query=None, fields=['count', 'doctor_name', 'specialisation', 'gender', 'years_of_experience', 'about_me', 'mobile_no'], filters=None, or_filters=None, docstatus=None, group_by=None, order_by=None, limit_start=False, limit_page_length=0, as_list=False, with_childnames=False, debug=False, ignore_permissions=True, user=None, with_comment_count=False, join='left join', distinct=False, start=None, page_length=None, limit=None, ignore_ifnull=False, save_user_settings=False, save_user_settings_fields=False, update=None, add_total_row=None, user_settings=None, reference_doctype=None, return_query=False, strict=True)",
+   "dump": {
+    "result": "undefined",
+    "self": "<frappe.model.db_query.DatabaseQuery object>",
+    "self. build_and_run": "<bound method DatabaseQuery.build_and_run of <frappe.model.db_query.DatabaseQuery object>>"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/model/db_query.py",
+   "func": "execute",
+   "lines": {
+    "94": "\t\t\tresult = self.run_custom_query(query)",
+    "95": "\t\telse:",
+    "96": "\t\t\tresult = self.build_and_run()",
+    "97": "\t\t\tif return_query:",
+    "98": "\t\t\t\treturn result"
+   },
+   "lnum": 96
+  },
+  {
+   "call": "(self=<frappe.model.db_query.DatabaseQuery object>)",
+   "dump": {
+    "as_dict": "undefined",
+    "debug": "undefined",
+    "frappe. db": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "frappe.db. sql": "<bound method Database.sql of <frappe.database.mariadb.database.MariaDBDatabase object>>",
+    "global frappe": "<module 'frappe' from '/home/anil/medley/apps/frappe/frappe/__init__.py'>",
+    "query": "'select count, doctor_name, specialisation, gende...\\n\\t\\t\\t\\n\\t\\t\\t order by `tabDoctor`.`modified` DESC\\n\\t\\t\\t'",
+    "self": "<frappe.model.db_query.DatabaseQuery object>",
+    "self. as_list": "False",
+    "self. debug": "False",
+    "self. update": "None",
+    "update": "undefined"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/model/db_query.py",
+   "func": "build_and_run",
+   "lines": {
+    "128": "\t\t\treturn query",
+    "129": "\t\telse:",
+    "130": "\t\t\treturn frappe.db.sql(query, as_dict=not self.as_list, debug=self.debug, update=self.update)",
+    "131": "",
+    "132": "\tdef prepare_args(self):"
+   },
+   "lnum": 130
+  },
+  {
+   "call": "(self=<frappe.database.mariadb.database.MariaDBDatabase object>, query='select count, doctor_name, specialisation, gende...\\n\\t\\t\\t\\n\\t\\t\\t order by `tabDoctor`.`modified` DESC\\n\\t\\t\\t', values=(), as_dict=True, as_list=0, formatted=0, debug=False, ignore_ddl=0, as_utf8=0, auto_commit=0, update=None, explain=False)",
+   "dump": {
+    "query": "'select count, doctor_name, specialisation, gende...\\n\\t\\t\\t\\n\\t\\t\\t order by `tabDoctor`.`modified` DESC\\n\\t\\t\\t'",
+    "self": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "self. _cursor": "<pymysql.cursors.Cursor object>",
+    "self._cursor. execute": "<bound method Cursor.execute of <pymysql.cursors.Cursor object>>"
+   },
+   "file": "/home/anil/medley/apps/frappe/frappe/database/database.py",
+   "func": "sql",
+   "lines": {
+    "169": "\t\t\t\t\tfrappe.log(\">>>>\")",
+    "170": "",
+    "171": "\t\t\t\tself._cursor.execute(query)",
+    "172": "",
+    "173": "\t\t\t\tif frappe.flags.in_migrate:"
+   },
+   "lnum": 171
+  },
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, query='select count, doctor_name, specialisation, gende...\\n\\t\\t\\t\\n\\t\\t\\t order by `tabDoctor`.`modified` DESC\\n\\t\\t\\t', args=None)",
+   "dump": {
+    "query": "'select count, doctor_name, specialisation, gende...\\n\\t\\t\\t\\n\\t\\t\\t order by `tabDoctor`.`modified` DESC\\n\\t\\t\\t'",
+    "result": "undefined",
+    "self": "<pymysql.cursors.Cursor object>",
+    "self. _query": "<bound method Cursor._query of <pymysql.cursors.Cursor object>>"
+   },
+   "file": "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py",
+   "func": "execute",
+   "lines": {
+    "168": "        query = self.mogrify(query, args)",
+    "169": "",
+    "170": "        result = self._query(query)",
+    "171": "        self._executed = query",
+    "172": "        return result"
+   },
+   "lnum": 170
+  },
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, q='select count, doctor_name, specialisation, gende...\\n\\t\\t\\t\\n\\t\\t\\t order by `tabDoctor`.`modified` DESC\\n\\t\\t\\t')",
+   "dump": {
+    "conn": "<pymysql.connections.Connection object>",
+    "conn. query": "<bound method Connection.query of <pymysql.connections.Connection object>>",
+    "q": "'select count, doctor_name, specialisation, gende...\\n\\t\\t\\t\\n\\t\\t\\t order by `tabDoctor`.`modified` DESC\\n\\t\\t\\t'"
+   },
+   "file": "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py",
+   "func": "_query",
+   "lines": {
+    "326": "        self._last_executed = q",
+    "327": "        self._clear_result()",
+    "328": "        conn.query(q)",
+    "329": "        self._do_get_result()",
+    "330": "        return self.rowcount"
+   },
+   "lnum": 328
+  },
+  {
+   "call": "(self=<pymysql.connections.Connection object>, sql=b'select count, doctor_name, specialisation, gen...t\\t order by `tabDoctor`.`modified` DESC\\n\\t\\t\\t', unbuffered=False)",
+   "dump": {
+    "self": "<pymysql.connections.Connection object>",
+    "self. _affected_rows": "1",
+    "self. _read_query_result": "<bound method Connection._read_query_result of <pymysql.connections.Connection object>>",
+    "unbuffered": "False"
+   },
+   "file": "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py",
+   "func": "query",
+   "lines": {
+    "515": "                sql = sql.encode(self.encoding, 'surrogateescape')",
+    "516": "        self._execute_command(COMMAND.COM_QUERY, sql)",
+    "517": "        self._affected_rows = self._read_query_result(unbuffered=unbuffered)",
+    "518": "        return self._affected_rows",
+    "519": ""
+   },
+   "lnum": 517
+  },
+  {
+   "call": "(self=<pymysql.connections.Connection object>, unbuffered=False)",
+   "dump": {
+    "result": "<pymysql.connections.MySQLResult object>",
+    "result. read": "<bound method MySQLResult.read of <pymysql.connections.MySQLResult object>>"
+   },
+   "file": "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py",
+   "func": "_read_query_result",
+   "lines": {
+    "730": "        else:",
+    "731": "            result = MySQLResult(self)",
+    "732": "            result.read()",
+    "733": "        self._result = result",
+    "734": "        if result.server_status is not None:"
+   },
+   "lnum": 732
+  },
+  {
+   "call": "(self=<pymysql.connections.MySQLResult object>)",
+   "dump": {
+    "first_packet": "undefined",
+    "self": "<pymysql.connections.MySQLResult object>",
+    "self. connection": "None",
+    "self.connection._read_packet": "undefined"
+   },
+   "file": "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py",
+   "func": "read",
+   "lines": {
+    "1073": "    def read(self):",
+    "1074": "        try:",
+    "1075": "            first_packet = self.connection._read_packet()",
+    "1076": "",
+    "1077": "            if first_packet.is_ok_packet():"
+   },
+   "lnum": 1075
+  },
+  {
+   "call": "(self=<pymysql.connections.Connection object>, packet_type=<class 'pymysql.protocol.MysqlPacket'>)",
+   "dump": {
+    "packet": "<pymysql.protocol.MysqlPacket object>",
+    "packet. check_error": "<bound method MysqlPacket.check_error of <pymysql.protocol.MysqlPacket object>>"
+   },
+   "file": "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py",
+   "func": "_read_packet",
+   "lines": {
+    "682": "",
+    "683": "        packet = packet_type(buff, self.encoding)",
+    "684": "        packet.check_error()",
+    "685": "        return packet",
+    "686": ""
+   },
+   "lnum": 684
+  },
+  {
+   "call": "(self=<pymysql.protocol.MysqlPacket object>)",
+   "dump": {
+    "err. raise_mysql_exception": "<function raise_mysql_exception>",
+    "global err": "<module 'pymysql.err' from '/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py'>",
+    "self": "<pymysql.protocol.MysqlPacket object>",
+    "self. _data": "b\"\\xff\\x1e\\x04#42S22Unknown column 'count' in 'field list'\""
+   },
+   "file": "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py",
+   "func": "check_error",
+   "lines": {
+    "218": "            errno = self.read_uint16()",
+    "219": "            if DEBUG: print(\"errno =\", errno)",
+    "220": "            err.raise_mysql_exception(self._data)",
+    "221": "",
+    "222": "    def dump(self):"
+   },
+   "lnum": 220
+  },
+  {
+   "call": "(data=b\"\\xff\\x1e\\x04#42S22Unknown column 'count' in 'field list'\")",
+   "dump": {
+    "errno": "1054",
+    "errorclass": "<class 'pymysql.err.InternalError'>",
+    "errval": "\"Unknown column 'count' in 'field list'\""
+   },
+   "file": "/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py",
+   "func": "raise_mysql_exception",
+   "lines": {
+    "105": "        errval = data[9:].decode('utf-8', 'replace')",
+    "106": "    else:",
+    "107": "        errval = data[3:].decode('utf-8', 'replace')",
+    "108": "    errorclass = error_map.get(errno, InternalError)",
+    "109": "    raise errorclass(errno, errval)"
+   },
+   "lnum": 109
+  }
+ ],
+ "locals": {
+  "data": "b\"\\xff\\x1e\\x04#42S22Unknown column 'count' in 'field list'\"",
+  "errno": "1054",
+  "errorclass": "<class 'pymysql.err.InternalError'>",
+  "errval": "Unknown column 'count' in 'field list'",
+  "is_41": "True"
+ },
+ "pyver": "Python 3.8.5: /home/anil/medley/env/bin/python (prefix: /home/anil/medley/env)",
+ "timestamp": "2020-11-21 16:05:26.699368",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/anil/medley/apps/frappe/frappe/app.py\", line 64, in application\n    response = frappe.api.handle()\n  File \"/home/anil/medley/apps/frappe/frappe/api.py\", line 59, in handle\n    return frappe.handler.handle()\n  File \"/home/anil/medley/apps/frappe/frappe/handler.py\", line 24, in handle\n    data = execute_cmd(cmd)\n  File \"/home/anil/medley/apps/frappe/frappe/handler.py\", line 64, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/anil/medley/apps/frappe/frappe/__init__.py\", line 1064, in call\n    return fn(*args, **newargs)\n  File \"/home/anil/medley/apps/erpnext/erpnext/doctor_api.py\", line 17, in get_doctor_list\n    doctor_details = frappe.db.get_all('Doctor',fields=['count','doctor_name','specialisation','gender', 'years_of_experience', 'about_me', 'mobile_no'])\n  File \"/home/anil/medley/apps/frappe/frappe/database/database.py\", line 528, in get_all\n    return frappe.get_all(*args, **kwargs)\n  File \"/home/anil/medley/apps/frappe/frappe/__init__.py\", line 1327, in get_all\n    return get_list(doctype, *args, **kwargs)\n  File \"/home/anil/medley/apps/frappe/frappe/__init__.py\", line 1300, in get_list\n    return frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)\n  File \"/home/anil/medley/apps/frappe/frappe/model/db_query.py\", line 96, in execute\n    result = self.build_and_run()\n  File \"/home/anil/medley/apps/frappe/frappe/model/db_query.py\", line 130, in build_and_run\n    return frappe.db.sql(query, as_dict=not self.as_list, debug=self.debug, update=self.update)\n  File \"/home/anil/medley/apps/frappe/frappe/database/database.py\", line 171, in sql\n    self._cursor.execute(query)\n  File \"/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py\", line 170, in execute\n    result = self._query(query)\n  File \"/home/anil/medley/env/lib/python3.8/site-packages/pymysql/cursors.py\", line 328, in _query\n    conn.query(q)\n  File \"/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py\", line 517, in query\n    self._affected_rows = self._read_query_result(unbuffered=unbuffered)\n  File \"/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py\", line 732, in _read_query_result\n    result.read()\n  File \"/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py\", line 1075, in read\n    first_packet = self.connection._read_packet()\n  File \"/home/anil/medley/env/lib/python3.8/site-packages/pymysql/connections.py\", line 684, in _read_packet\n    packet.check_error()\n  File \"/home/anil/medley/env/lib/python3.8/site-packages/pymysql/protocol.py\", line 220, in check_error\n    err.raise_mysql_exception(self._data)\n  File \"/home/anil/medley/env/lib/python3.8/site-packages/pymysql/err.py\", line 109, in raise_mysql_exception\n    raise errorclass(errno, errval)\npymysql.err.InternalError: (1054, \"Unknown column 'count' in 'field list'\")\n"
+}
